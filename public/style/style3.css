@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f3f3f3;
+}
+
+/* Background with overlay */
+.main-body {
+  background: url("https://via.placeholder.com/1200x600.png?text=Gym+Background") 
+              no-repeat center center/cover;
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 60px 20px;
+  width: 100%;
+  min-height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+}
+
+/* Grid for cards */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Card styling */
+.exercise-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 380px;   /* 🔥 ensures equal height */
+  transition: transform 0.2s ease;
+}
+
+.exercise-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Card image */
+.exercise-card img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Text */
+.exercise-details {
+  flex: 1;
+  text-align: center;
+}
+
+.exercise-details h2 {
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+  color: #222;
+}
+
+.exercise-details p {
+  margin: 6px 0;
+  color: #444;
+}
+.logout-form {
+  display: inline;
+}
+
+.logout-btn {
+  background: none;
+  border: none;
+  color: white;
+  margin: 0 15px;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: inherit;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* same hover effect as links */
+.logout-btn:hover {
+  transform: scale(1.2);
+  color: #c00e04;
+}
+

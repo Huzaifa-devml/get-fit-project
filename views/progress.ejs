@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/style4.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav">
+        <ul class="bb">
+          <li>
+            GET FIT
+            <img src="/images/dumbell.png" alt="noo" srcset="" />
+          </li>
+
+          <a href="/profile">HOME</a
+          ><!golden rule of webdevelopment wherever you want to go always use'/ because its really confusing!>
+          <a href="/workouts">WORKOUT PLAN</a>
+          <a href="/nutrition">NUTRITION</a>
+          <a href="/progress">PROGRESS</a>
+          
+           <form action="/logout" method="POST" style="display:inline;">
+        <button type="submit" class="logout-btn">LOGOUT</button>
+      </form>
+        </ul>
+      </div>
+    </div>
+    <div class="overlay">
+      <div class="page-heading">
+        <h1 class="heading">My Workouts</h1>
+      </div>
+
+      <div class="body">
+        <div class="cardcontainer">
+          <% workout.forEach(ex => { %>
+          <div class="card">
+            <h1>Explore your workouts!</h1>
+            <div class="contentcontainer">
+              <div class="images">
+                <img src="<%= ex.image %>" alt="" srcset="" />
+              </div>
+              <div class="content">
+                <h3><%= ex.name %></h3>
+                <p><%= ex.description %></p>
+                <p>Equipment: <%= ex.equipment %></p>
+                <p>Sets: <%= ex.sets %>, Reps: <%= ex.reps %></p>
+                <div class="btn">
+                  <form action="/progress/delete" method="post">
+                    <input
+                      type="hidden"
+                      name="exerciseId"
+                      value="<%= ex._id %>"
+                    />
+                    <button type="submit">Mark as completed</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

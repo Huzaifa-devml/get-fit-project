@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  width: auto;
+  height: auto;
+  background: linear-gradient(135deg, #111, #1a1a1a);
+  background: url("../images/profileimage.png")no-repeat center center fixed; /*use dto fix the background image*/
+  background-size: cover;
+  overflow-x: hidden;
+  background-color: black;
+  
+
+  color: white;
+}
+
+/* ---------------- */
+/* Navbar */
+.nav {
+  width: 100vw;
+  height: auto;
+  position: fixed;
+  top: 0;
+  z-index: 99999;
+  background-color: #111;
+  padding: 15px 30px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav ul li {
+  color: white;
+  margin: 0 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav ul a {
+  color: white;
+  margin: 0 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav ul li:first-child {
+  font-weight: bold;
+  font-size: 40px;
+  color: #c00e04; /* red branding */
+}
+
+.nav ul li {
+  font-size: 18px;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav ul li:hover,
+.nav ul a:hover {
+  transform: scale(1.2);
+  color: #c00e04;
+}
+
+.nav ul li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav ul li img {
+  height: 40px;
+  width: 60px;
+  border-radius: 20%;
+}
+
+/* ---------------- */
+/* Heading under navbar */
+.heading {
+  margin-top: 30px; /* below navbar */
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: white; /* red accent */
+  letter-spacing: 2px;
+  cursor: pointer;
+
+}
+
+
+.heading1 {
+  margin-top: 30px; /* below navbar */
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: white; /* red accent */
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+  font-weight: 800;
+
+}
+.heading1:hover{
+  transform: scale(1.2);
+  color: #a30000;
+}
+
+
+.page-heading h1 {
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+
+.page-heading h1:hover {
+  transform: scale(1.2);
+  color: #a30000;
+}
+
+/* ---------------- */
+/* Body and Cards */
+.body {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+.cardcontainer {
+  display: flex;
+  flex-wrap: wrap; /* multiple rows */
+  gap: 30px;
+  justify-content: center;
+  width: 100%;
+  max-width: 1400px; /* bigger width for more space */
+}
+
+/* Card */
+.card {
+  flex: 1 1 calc(50% - 40px); /* 2 per row */
+  max-width: 600px;
+  background: #1c1c1c;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+   /* red border accent */
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px #a30000;
+}
+
+.card h1 {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+/* Content inside cards */
+.contentcontainer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.images {
+  flex: 0 0 160px;
+  height: 160px;
+  border-radius: 10px;
+  overflow: hidden;
+  
+}
+.overlay {
+  padding: 100px 0;
+  background: rgba(0, 0, 0, 0.5); /* dark layer on top of bg */
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.images img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.content {
+  flex: 1;
+  background-color:white;
+  border-radius: 10px;
+  padding: 15px;
+  color: #ddd;
+}
+
+.content h3 {
+  text-align: center;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 700;
+}
+
+.content p {
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #555;
+  font-weight: 600;
+}
+
+/* Button */
+.btn {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.btn button {
+  text-decoration: none;
+  cursor: pointer;
+  background: #a30000;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn button:hover {
+  background: #ff1f1f;
+  transform: scale(1.1);
+}
+.logout-form {
+  display: inline;
+}
+
+.logout-btn {
+  background: none;
+  border: none;
+  color: white;
+  margin: 0 15px;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: inherit;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* same hover effect as links */
+.logout-btn:hover {
+  transform: scale(1.2);
+  color: #c00e04;
+}

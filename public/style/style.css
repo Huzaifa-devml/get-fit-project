@@ -1,0 +1,82 @@
+.login-container {
+  max-width: 400px;
+  margin: 5rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+body {
+  width: auto;
+  height: auto;
+  background:  linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+  background: url("../images/profileimage.png")no-repeat center center fixed; /*use dto fix the background image*/
+  background-size: cover;
+  overflow-x: hidden;
+  background-color: black;
+  
+
+}
+
+.login-container h2 {
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-container .btn {
+  width: 100%;
+  padding: 0.7rem;
+  background: #c00e04;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.login-container p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+.login-container p a {
+  color: #c00e04;
+  text-decoration: none;
+}
+.logout-form {
+  display: inline;
+}
+
+.logout-btn {
+  background: none;
+  border: none;
+  color: white;
+  margin: 0 15px;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: inherit;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* same hover effect as links */
+.logout-btn:hover {
+  transform: scale(1.2);
+  color: #c00e04;
+}

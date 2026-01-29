@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/style2.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav">
+        <ul class="bb">
+          <li>
+            GET FIT
+            <img src="/images/dumbell.png" alt="noo" srcset="" />
+          </li>
+
+          <a href="/profile">HOME</a>
+          <a href="/workouts">WORKOUT PLAN</a>
+          <a href="/nutrition">NUTRITION</a>
+          <a href="/progress">PROGRESS</a>
+           <form action="/logout" method="POST" style="display:inline;">
+        <button type="submit" class="logout-btn">LOGOUT</button>
+      </form>
+        </ul>
+      </div>
+      
+      <div class="main-body">
+        <div class="overlay">
+          <div class="content">/
+            <span class="content-info">
+              <h1>Hello <%= user.name %> what do you want to train today</h1>
+              <h2>customise your workout</h2>
+            </span>
+
+            <span class="content-cards">
+              <div class="cards">
+                <div class="card">
+                  <img src="../images/images.jpg" alt="Chest Workout" />
+                  <div class="card-content">
+                    <h3>Chest Workout</h3>
+                    <p>
+                      Boost your strength and build a powerful upper body with
+                      targeted chest exercises.
+                    </p>
+                    
+                    <a href="/workouts/chest">Explore more</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cards">
+                <div class="card">
+                  <img src="../images/back.png" alt="Chest Workout" />
+                  <div class="card-content">
+                    <h3>Back Workout</h3>
+                    <p>
+                      Boost your strength and build a powerful upper body with
+                      targeted back exercises.
+                    </p>
+                  <a href="/workouts/back">Explore more</a>  
+                  </div>
+                </div>
+              </div>
+              
+
+              <div class="cards">
+                <div class="card">
+                  <img src="../images/Shoulder.png" alt="Chest Workout" />
+                  <div class="card-content">
+                    <h3>Shoulder Workout</h3>
+                    <p>
+                      Boost your strength and build a powerful upper body with
+                      targeted shoulder exercises.
+                    </p>
+                    <a href="/workouts/shoulder">Explore more</a>
+                  </div>
+                </div>
+              </div>
+              <div class="cards">
+                <div class="card">
+                  <img src="../images/biceps.png" alt="Chest Workout" />
+                  <div class="card-content">
+                    <h3>Biceps Workout</h3>
+                    <p>
+                      Boost your strength and build a powerful upper body with
+                      targeted biceps exercises.
+                    </p>
+                   <a href="/workouts/biceps">Explore more</a>
+                  </div>
+                </div>
+              </div>
+              <div class="cards">
+                <div class="card">
+                  <img src="../images/triceps.png" alt="Chest Workout" />
+                  <div class="card-content">
+                    <h3>Triceps workout</h3>
+                    <p>
+                      Boost your strength and build a powerful upper body with
+                      targeted triceps exercises.
+                    </p>
+                   <a href="/workouts/triceps">Explore more</a>
+                  </div>
+                </div>
+              </div>
+              <div class="cards">
+                <div class="card">
+                  <img src="../images/legs.png" alt="Chest Workout" />
+                  <div class="card-content">
+                    <h3>Legs workout</h3>
+                    <p>
+                      Boost your strength and build a powerful upper body with
+                      targeted legs exercises.
+                    </p>
+                    <a href="/workouts/legs">Explore more</a>
+                  </div>
+                </div>
+              </div>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
