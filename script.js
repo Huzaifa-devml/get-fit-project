@@ -1,11 +1,20 @@
 require("dotenv").config()
+const mongoose=require("mongoose")
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => {
+    console.log("MongoDB connected");
+  })
+  .catch((err) => {
+    console.error("MongoDB connection error:", err.message);
+  });
 const express=require('express')//for using express
 const app=express()//everything that express can do now app can do
 const bcrypt=require('bcrypt')//for encrypting password or for saftey purpose
 const cookieParser=require ('cookie-parser')//for generating cookies so that the server could recognise who are we
 const jwt = require('jsonwebtoken')//
 const path=require('path')//for joinging to the pages like public etc
-const mongoose=require("mongoose")
+
 
 const usermodel=require('./models/usermodel')//requiring the user model that we created using mongoose
 const WorkoutModel=require('./models/workoutModels')//requiring the workout model that we created using mongoose
@@ -14,7 +23,6 @@ app.set("view engine","ejs")//setting up the ejs so that instead of going to mul
 app.use(express.json())
 app.use(express.static(path.join(__dirname,"public")))//we have created multiple pictures snow to connect them we use path.join
 app.use(express.urlencoded({extended:true}))
-mongoose.connect(process.env.MONGO_URI).then(()=>console.log("mongodbconnected")).catch((err)=>{console.error})
 app.use(cookieParser())//for using cookies parser
 
 
